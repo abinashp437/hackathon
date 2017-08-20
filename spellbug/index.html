@@ -1,44 +1,22 @@
 <head>
   <link href="index.css" link="text/css" rel="stylesheet">
-
+    <script src="dictionary.json" type="text/javascript"></script>
+  <h1>GDG Spellbound</h1>
 </head>
 
 <body>
   <div class="clearfix">
-   <div1 class="column Addword">
-      <h1>Add a new word</h1>
-      <form action="dictionary.json">
-        <input type="text" value="New word" id="mytext">
-        <script>
+   <p class="content" id="demo"></p>
 
-        var x=document.getElementById('mytext').value;
-        var myobj=JSON.parse(x);
-        for(i=commonwords.length;i<commonwords.length+1;i++)
-        {commonwords[i]=myobj[i];
-        }
-        </script><br><br>
-        <input type="submit" value="Add To Dictionary">
-    </div1>
-    <div2 class="column submission">
-      <h2>
-      <form action="Spellcheck.json">
-        <input type="text" id="mytext1" class="myt"> <br><br><br><br><br>
-        <input type="submit" value="submit">
-        <script>
-        $.getJSON( "ajax/test.json", function( data ) {
-
-        }
-        var y=document.getElementById('mytext1').value;
-        var myobj1=JSON.parse(y);
-        for (i=0;i<myobj1.length;i++){
-          for (j=0;j<commonwords.length;i++){
-            if (myobj1[i]!=commonwords[i]){
-              getElementById('mytext1').myobj1[i].innerhtml="myobj1[i]";
-              getElementById('mytext1').myobj1[i].style.text-decoration=underline;
-            }
-
-          }
-          }
-        </script>
-    </div2>
+   <div class="column Addword">
+      <h2>Add a new word</h2>
+        <input type="text" value="New word" id="mytext"></input>
+        <br><br>
+        <button type="submit" onclick="load()">Add to dictionary</button>
+    </div>
+    <div class="column submission">
+        <textarea id="mytext1" class="myt"></textarea>
+        <br><br><br><br><br><br><br><br>
+        <button type="submit" class="myt1" onclick="myfn()">Submit</button>
+    </div>
   <div>
