@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<head>
+</head>
+
+<body>
+    <table class="expense-table">
+        <tr id="heading">
+            <td></td>
+            <td id="food">FOOD</td>
+            <td id="travel">TRAVEL</td>
+            <td id="clothes">CLOTHES</td>
+            <td id="bill">BILL</td>
+        </tr>
+        <tr>
+            <td id="heading">EXPENSE LIMIT</td>
+            <td>10000</td>
+            <td>3000</td>
+            <td>4000</td>
+            <td>10000</td>
+        </tr>
+        <tr>
+            <td id="heading">TOTAL EXPENSE</td>
+            <td id="foodex">0</td>
+            <td id="travelex">0</td>
+            <td id="clothesex">0</td>
+            <td id="billex">0</td>
+        </tr>
+    </table>
+    <table id="user-input">
+        <tr>
+            <td>
+                <form>
+                    <table class="form-table">
+                        <tr class="form-table">
+                            <td class="form-table">
+                                <b>Expense Type</b></td>
+                            <td class="form-table">
+
+
+                                <select id="myList">
+                                <option value = "food">FOOD</option>
+                                <option value = "travel">TRAVEL</option>
+                                <option value = "clothes">CLOTHES</option>
+                                <option value = "bill">BILL</option>
+                            </select>
+
+
+                            </td>
+                        </tr>
+                        <tr class="form-table">
+                            <td class="form-table">
+                                <b>Amount</b></td>
+                            <td class="form-table"><input type="text" name="amount" id="input"></td>
+                        </tr>
+                        <tr class="form-table">
+                            <td class="form-table"><button type="button" id="mylink">Update expense</button></td>
+                        </tr>
+                    </table>
+                </form>
+            </td>
+        </tr>
+
+
+    </table>
+
+    <script src="myscript.js"></script>
+</body>
+
+</html>

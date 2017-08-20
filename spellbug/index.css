@@ -1,0 +1,22 @@
+h1{
+  font-family: sans-serif;
+  font-size: 20px;
+}
+.column {
+    float: left;
+    padding: 20px;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.Addword {
+    width: 25%;
+}
+.submission {
+    width: 75%;
+}
+.myt{
+  overflow: scroll;
+}
