@@ -1,44 +1,23 @@
 <head>
   <link href="index.css" link="text/css" rel="stylesheet">
-  <script src="dictionary.json" type="text/javascript"></script>
-  <script>
-     function load(){
-       var x = document.getElementById("mytext").value;
-       document.getElementById("demo").innerHTML = x+" is added.";
-       $.getJSON('dictionary.json', function(data) {
-      $.each(data.commonwords,function(i, f) {
-        var y = JSON.parse(data.commonwords);
-
-          });
-        });
-
-
-        for(i=y.length();i<y.length()+1;i++)
-        {
-          y[i] = x;
-        }
-        data.commonwords = JSON.stringify(y);
-      }
-      function load1(){
-        var a = document.getElementById("mytext1").value;
-        document.getElementById("demo").innerHTML = a;
-      }
-  </script>
   <h1>GDG Spellbound</h1>
 </head>
 
 <body>
   <div class="clearfix">
-   <p class="content" id="demo"></p>
+   <div class="content" id="demo"></div>
    <div class="column Addword">
       <h2>Add a new word</h2>
         <input type="text" value="New word" id="mytext">
         <br><br>
-        <button type="submit" onclick="load()">Add to dictionary</button>
+        <button type="submit" onclick="add()">Add to dictionary</button>
     </div>
     <div class="column submission">
         <textarea id="mytext1" class="myt"></textarea>
         <br><br><br><br><br><br><br><br>
-        <button type="submit" class="myt1" onclick="load1()">Submit</button>
+        <button type="submit" class="myt1" onclick="check()">Submit</button>
     </div>
   <div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+    <script src = "index.js" type = "text/javascript"></script>
+</body>

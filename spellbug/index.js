@@ -1,26 +1,28 @@
-<script>
-
-
-  var y = "advav";
-  document.getElementById("demo").innerHTML = y;
-
-  var y=document.getElementById('mytext1').value;
-  var myobj1=JSON.parse(y);
-  for (i=0;i<myobj1.length;i++){
-   for (j=0;j<commonwords.length;i++){
-     if (myobj1[i]!=commonwords[i]){
-       document.getElementById('demo').innerhtml="myobj1";
-       document.getElementById('mytext1').myobj1[i].style.text-decoration=underline;
+$(document).ready(function(){
+  var commonwords = [];
+  $.getJSON('dictionary.json', function(data) {
+  commonwords = data.commonWords;
+  console.log(commonwords);
+  });
+  add = function(){
+    var x = document.getElementById("mytext").value;
+    commonwords.push(x);
+    document.getElementById("demo").innerHTML = x+" is added.";
+  }
+  check = function(){
+   var a = document.getElementById("mytext1").value;
+   var b = a.split(" ");
+   console.log(b);
+   for(i=0;i<b.length;i++){
+     if(commonwords.indexOf(b[i])===-1)
+     {
+       document.getElementById("demo").innerHTML += '<span class="red_text">'+b[i]+" "+'</span>';
+     }
+     else {
+       document.getElementById("demo").innerHTML += b[i]+" ";
+     }
    }
-  }
+ }
 
 
-
-
-  var x=document.getElementById('mytext').value;
-  var myobj=JSON.parse(x);
-  for(i=commonwords.length;i<commonwords.length+1;i++)
-  {commonwords[i]=myobj[i];
-  }
-
-</script>
+});
