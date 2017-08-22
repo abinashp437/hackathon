@@ -9,6 +9,11 @@ $(document).ready(function(){
     commonwords.push(x);
     document.getElementById("demo").innerHTML = x+" is added.";
   }
+  console.log(commonwords);
+  clear = function(){
+  document.getElementById("demo").innerHTML = "";
+  check();  
+  }
   check = function(){
    var a = document.getElementById("mytext1").value;
    var b = a.split(" ");
