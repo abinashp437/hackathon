@@ -39,16 +39,16 @@ function update() {
 }
 
 function excess() {
-    if (document.getElementById("foodex").value > document.getElementById("fl").value) {
+    if (Number(document.getElementById("foodex").innerHTML) > Number(document.getElementById("fl").innerHTML)) {
         highlight("food", "fl", "fper", "foodex");
     }
-    if (document.getElementById("travelex").value > document.getElementById("tl").value) {
+    if (Number(document.getElementById("travelex").innerHTML) > Number(document.getElementById("tl").innerHTML)) {
         highlight("travel", "tl", "tper", "travelex");
     }
-    if (document.getElementById("clothesex").value > document.getElementById("cl").value) {
+    if (Number(document.getElementById("clothesex").innerHTML) > Number(document.getElementById("cl").innerHTML)) {
         highlight("clothes", "cl", "cper", "clothesex");
     }
-    if (document.getElementById("billex").value > document.getElementById("bl").value) {
+    if (Number(document.getElementById("billex").innerHTML) > Number(document.getElementById("bl").innerHTML)) {
         highlight("bill", "bl", "bper", "billex");
     }
 }
